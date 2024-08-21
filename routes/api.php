@@ -23,5 +23,4 @@ Route::apiResource('project',ProjectController::class)->middleware('auth:sanctum
 Route::apiResource('task',TaskController::class)->middleware('auth:sanctum','check-permission:admin,editor');
 Route::apiResource('assignment',AssignmentsController::class)->middleware('auth:sanctum','check-permission:admin,editor');
 Route::put('/task/{task}/status',[TaskController::class,'updateStatus'])->middleware('auth:sanctum');
-// Route::get('/assignments/user/',[AssignmentsController::class, 'getAssingments'])->middleware('auth:sanctum');
 

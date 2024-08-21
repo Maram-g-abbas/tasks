@@ -14,18 +14,18 @@ class Project extends Model
         'name','description','tasks','progress'
     ];
 
-    public function projectTasks(){
+    public function tasks(){
         return $this->hasMany(Task::class);
     }
 
-    public function updateTaskCount(){
-        $this->tasks = $this->projectTasks()->count();
-        $this -> save();
-    }
+    // public function updateTaskCount(){
+    //     $this->tasks = $this->tasks()->count();
+    //     $this -> save();
+    // }
 
     public function updateProgress(){
-        $compleatedTasks = $this->projectTasks()->where('status',true)->count();
-        $totalTasks = $this->projectTasks()->count();
+        $compleatedTasks = $this->tasks->where('status',true)->count();
+        $totalTasks = $this->tasks()->count();
         if($totalTasks === 0)
             $this->progresss = 100;
         else

@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->integer('tasks')->nullable()->default(0);
             $table->date('progress')->nullable()->default(100);
             $table->timestamps();
         });

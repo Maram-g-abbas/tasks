@@ -16,7 +16,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-            return Project::all();
+            return Project::with('tasks')->get();
        
       
     }
@@ -40,7 +40,7 @@ class ProjectController extends Controller
     public function show($id)
     {
         try {
-            $project = Project::findOrFail($id);
+            $project = Project::with('tasks')->findOrFail($id); Project::findOrFail($id);
             return $project;
         }catch (ModelNotFoundException $e){
             return $this->errorResponse("invalid input",404,"project not found");

@@ -50,6 +50,11 @@ class Task extends Model
         {
             return $query->where('deadline', '<=', $deadline);
         }
+
+        public function scopeByProjectId($query, $projectId)
+        {
+            return $query->where('project_id', $projectId);
+        }
     
 
         public function users()

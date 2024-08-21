@@ -18,7 +18,9 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        $query = Task::query();
+        $query = Task::query()->with(['users' => function ($query) {
+            $query->select('user_id', 'name');
+        }]);
 
         // Apply status filter if provided
         if ($request->has('status')) {
@@ -34,6 +36,14 @@ class TaskController extends Controller
         if ($request->has('deadline')) {
             $query->byDeadline($request->deadline);
         }
+
+        // Apply deadline filter if provided
+        if ($request->has('project_id')) {
+            $projectId = $request->input('project_id');
+            $query->byProjectId($projectId);
+        }
+
+
 
         // Get the filtered tasks
         $tasks = $query->get();
@@ -57,7 +67,9 @@ class TaskController extends Controller
     public function show($id)
     {
         try {
-            $task = Task::findOrFail($id);
+            $task = Task::findOrFail($id)->with(['users' => function ($query) {
+                $query->select('user_id', 'name');
+            }]);
             return $task;
         } catch (ModelNotFoundException $e){
             return $this->errorResponse("invalid input",404,"task not found");

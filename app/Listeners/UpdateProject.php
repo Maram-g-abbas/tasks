@@ -22,7 +22,7 @@ class UpdateProject
     public function handle(TaskUpdated $event): void
     {
         $project = $event->task->project;
-        $project->updateTaskCount();
+        // $project->updateTaskCount();
         $project->updateProgress();
     }
 }
