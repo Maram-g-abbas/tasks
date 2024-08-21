@@ -18,8 +18,8 @@ import the json file into your post man and you can access the documentation col
 from the auth collection run the login enpoint with the inputs be 
 
 admin
- email : admin@gmail.com
- password : 123456
+email : admin@gmail.com
+password : 123456
 
 editor
 email : editor@gmail.com
