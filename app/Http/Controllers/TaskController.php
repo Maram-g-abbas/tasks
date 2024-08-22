@@ -7,8 +7,10 @@ use App\Http\Requests\UpdateTaskRequest;
 use App\Http\Requests\UpdateTaskStatusRequest;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\User;
 use App\Traits\ApiResponse;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use  App\Notifications\TaskDeadline;
 
 class TaskController extends Controller
 {
@@ -116,6 +118,18 @@ class TaskController extends Controller
         }catch (ModelNotFoundException $e){
             return $this->errorResponse("invalid input",404,"task not found");
         }
+    }
+
+    public function notify(Request $request){
+        $user = $request->user();
+        
+        try {
+            $user->notify(new TaskDeadline());
+            return 'email sent successfull';
+        } catch (\Exception $e) {
+            // Handle the notification error here
+            return $e->getMessage();
+        }    
     }
 
 }

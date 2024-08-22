@@ -30,3 +30,6 @@ email :user@gmail.com
 password : 123456
 
 update the collection variabels authentication tokes with tokens generated in these previouse to be able to run the the authrized end points 
+
+# email notifications
+i used mailtrip as an smtp for sending notification email in a pre production inveroment please update the .env file with your mailbox account credintials to test the email notifications

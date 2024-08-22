@@ -29,8 +29,8 @@ class StoreTaskRequest extends FormRequest
                 'title'=>'required',
                 'description'=>'required',
                 'priority'=>'required',
-                'deadline'=>'required',
-                'project_id'=>'required'
+                'project_id'=>'required',
+                'deadline' => ['required', 'date_format:Y-m-d'],
         ];
     }
 

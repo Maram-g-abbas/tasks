@@ -24,3 +24,4 @@ Route::apiResource('task',TaskController::class)->middleware('auth:sanctum','che
 Route::apiResource('assignment',AssignmentsController::class)->middleware('auth:sanctum','check-permission:admin,editor');
 Route::put('/task/{task}/status',[TaskController::class,'updateStatus'])->middleware('auth:sanctum');
 
+Route::get('/notify/{email}',[TaskController::class,'notify'])->middleware('auth:sanctum');

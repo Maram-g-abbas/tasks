@@ -7,376 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "test",
-			"item": [
-				{
-					"name": "get",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "ac85f17156263c6bd93221b3802dd33144b205307e9856f9d0096b28fd488349",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/posts/1",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"posts",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/posts/2",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"posts",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get All",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/posts",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"posts"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "create",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "1|epEQjsoyS6q9rA3bPlFyaKPAOuXNwNx5yYqL2aRd7c1dd713",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\" : \"post 2\",\n    \"body\" : \"this is a test post 2\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/posts",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"posts"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|lZkltNp6a3Nsfdwa5cN9IilrRNnA4Uuyxs5nizPf0fdb22b1",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\" : \"post 1 updated\",\n    \"body\" : \"this is a test post 1\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/posts/1",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"posts",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "regester",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\" : \"editor2\",\n    \"email\" : \"editor2@gmail.com\",\n    \"password\" : \"123\",\n    \"password_confirmation\" : \"123\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/regester",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"regester"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "login",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\" : \"editor2@gmail.com\",\n    \"password\" : \"123\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/login",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "logout",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|T5vnI5lovGxROvJXMraKiWr4YWcxZVWvsJEtPcPL53b034c7",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/logout",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"logout"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get user",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|T0DrMbEf4HOgF78VkoKPsg1Dg8gQKxz02o4HSTWHe3994ac3",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/user",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"user"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "api",
 			"item": [
 				{
@@ -546,17 +176,11 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/project/0",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/project/0",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"project",
 										"0"
 									]
@@ -591,18 +215,13 @@
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/assignment",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/assignment/1",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
-										"assignment"
+										"assignment",
+										"1"
 									]
 								}
 							},
@@ -630,19 +249,12 @@
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/assignment/1",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/assignment",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
-										"assignment",
-										"1"
+										"assignment"
 									]
 								}
 							},
@@ -670,17 +282,11 @@
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/assignment/1",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/assignment/1",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"assignment",
 										"1"
 									]
@@ -689,7 +295,7 @@
 							"response": []
 						},
 						{
-							"name": "add assignments",
+							"name": "assign task",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -761,19 +367,46 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/assignment/1",
-									"protocol": "http",
+									"raw": "{{baseUrl}}assignment/1",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}assignment"
 									],
-									"port": "8000",
 									"path": [
-										"api",
-										"assignment",
 										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get assignments by user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/assignments/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"assignments",
+										"user"
 									]
 								}
 							},
@@ -785,7 +418,7 @@
 					"name": "tasks",
 					"item": [
 						{
-							"name": "get tasks",
+							"name": "get all tasks",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -828,6 +461,210 @@
 									"query": [
 										{
 											"key": "project_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get tasks with status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{editor}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/task?status=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"task"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get tasks by project",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{editor}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/task?project_id=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"task"
+									],
+									"query": [
+										{
+											"key": "project_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get tasks with proiority",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{editor}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/task?priority=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"task"
+									],
+									"query": [
+										{
+											"key": "priority",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get tasks with deadline",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{editor}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/task?deadline=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"task"
+									],
+									"query": [
+										{
+											"key": "deadline",
 											"value": "1"
 										}
 									]
@@ -926,7 +763,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"title\": \"task 1\",\n    \"description\" : \"this is the second task\",\n    \"priority\" : \"hiegh\",\n    \"deadline\" : \"date\",\n    \"project_id\" : 1\n\n}",
+									"raw": "{\n    \"title\": \"task 1\",\n    \"description\" : \"this is the second task\",\n    \"priority\" : \"hiegh\",\n    \"deadline\" : \"2024-08-22\",\n    \"project_id\" : 1\n\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -976,17 +813,11 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/task/1",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/task/1",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"task",
 										"1"
 									]
@@ -1056,7 +887,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\" : \"editor\",\n    \"email\" : \"editor@gmail.com\",\n    \"password\" : \"123\",\n    \"password_confirmation\" : \"123\"\n}",
+									"raw": "{\n    \"name\" : \"maram\",\n    \"email\" : \"mimi.fory@gmail.com\",\n    \"password\" : \"123\",\n    \"password_confirmation\" : \"123\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1064,17 +895,11 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/regester",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/regester",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"regester"
 									]
 								}
@@ -1094,7 +919,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\" : \"editor@gmail.com\",\n    \"password\" : \"123456\"\n}",
+									"raw": "{\n    \"email\" : \"user@gmail.com\",\n    \"password\" : \"123456\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1102,17 +927,11 @@
 									}
 								},
 								"url": {
-									"raw": "http://192.168.1.5:8000/api/login",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/login",
 									"host": [
-										"192",
-										"168",
-										"1",
-										"5"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"login"
 									]
 								}
@@ -1141,17 +960,11 @@
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/logout",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/logout",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"logout"
 									]
 								}
@@ -1180,17 +993,11 @@
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/profile",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/profile",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"profile"
 									]
 								}
@@ -1203,7 +1010,7 @@
 					"name": "users",
 					"item": [
 						{
-							"name": "get users",
+							"name": "get all users",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -1224,17 +1031,11 @@
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/user",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/user",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"user"
 									]
 								}
@@ -1263,17 +1064,11 @@
 									}
 								],
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/user/2",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/user/2",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"user",
 										"2"
 									]
@@ -1312,59 +1107,13 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/api/user/2",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/user/2",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{baseUrl}}"
 									],
-									"port": "8000",
 									"path": [
-										"api",
 										"user",
 										"2"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get assignments",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/assignments/user",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"assignments",
-										"user"
 									]
 								}
 							},
@@ -1373,6 +1122,89 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "test sending notification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{maram}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/notify/marmargafar@gmail.com",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notify",
+						"marmargafar@gmail.com"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://192.168.1.5:8000/api",
+			"type": "string"
+		},
+		{
+			"key": "admin",
+			"value": "2|LU50c0ObG1LklWoxpWIT4q1cVO7uAPGFrkXO9caX1c250bff",
+			"type": "string"
+		},
+		{
+			"key": "editor",
+			"value": "1|lBS3tR2nWOX5YhTZ9dPyPHO7R2pUDJ5lCz6xmB1l639f6860",
+			"type": "string"
+		},
+		{
+			"key": "user",
+			"value": "3|IN2UaoYxn4uTW1xiRqX3tep6jl62Hk70HSwvVa2n09011ace",
+			"type": "string"
+		},
+		{
+			"key": "maram",
+			"value": "4|zKg7Otw19EDTBppuaUP3V2I5HG99Pe0cS9S5ezep825c05fd",
+			"type": "string"
 		}
 	]
 }
