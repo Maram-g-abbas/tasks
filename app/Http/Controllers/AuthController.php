@@ -54,7 +54,7 @@ class AuthController extends Controller
 
         // authenticate user using hashed password
         if(!$user || !Hash::check($request->password,$user->password)){
-            return "invalid creadintials";
+            return response()->json(['message' => 'Invalid credentials'], 401);
         }
 
         //issue token for the user
